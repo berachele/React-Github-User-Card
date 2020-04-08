@@ -2,26 +2,52 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import UserCard from "./components/UserCard"
-import FollowerCard from "./components/FollowerCard"
+import FollowerList from "./components/FollowerList"
 import axios from "axios"
 
 class App extends React.Component {
   state = {
-    users: {}
+    users: {},
+    followers: []
   }
 
   componentDidMount(){
-    axios.get("https://api.github.com/users/berachele")
+    // axios.get("https://api.github.com/users/berachele")
+    // .then(response => {
+    //   console.log(response.data)
+    //   this.setState({
+    //     users: response.data
+    //   })
+    // })
+    // .catch(error => {
+    //   console.log("ERROR!", error)
+    // })
+
+    axios.get("https://api.github.com/users/berachele/followers")
     .then(response => {
-      console.log(response.data)
+      console.log("THIS IS FOLLWERS RESP-->", response.data)
       this.setState({
-        users: response.data
+        followers: response.data
       })
     })
     .catch(error => {
-      console.log("ERROR!", error)
+      console.log("Error on showFollowers", error)
     })
   }
+
+  // showFollowers = event => {
+  //   event.preventDefault()
+  //   axios.get("https://api.github.com/users/berachele/followers")
+  //   .then(response => {
+  //     console.log("THIS IS FOLLWERS RESP-->", response)
+  //     // this.setState({
+  //     //   followers: []
+  //     // })
+  //   })
+  //   .catch(error => {
+  //     console.log("Error on showFollowers", error)
+  //   })
+  // }
 
   render(){
     return (
@@ -31,17 +57,8 @@ class App extends React.Component {
           <h1>GitHub User's</h1>
         </header>
         <div>
-          <UserCard users={this.state.users}/>
-          {/* <h2>Name: {this.name}</h2>
-          <h3>Username: {this.username}</h3>
-          <img>{this.photo}</img>
-          <p>More info <button>down below</button></p>
-          <div>
-              <p>Location: {this.location}</p>
-              <p>Bio: {this.bio}</p>
-              <p>Followers: {this.followers}</p>
-              <p>Following: {this.following}</p>
-          </div> */}
+          {/* <UserCard users={this.state.users}/> */}
+          <FollowerList followers={this.state.followers}/>
         </div>
       </div>
     )
