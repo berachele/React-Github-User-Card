@@ -13,6 +13,9 @@ const UserCard = props => {
                     <p>Bio: {props.users.bio}</p>
                     <p>Followers: {props.users.followers}</p>
                     <p>Following: {props.users.following}</p>
+                    <div>
+                        <p>See my followers: <button>here</button></p>
+                    </div>
                 </div>
                 
             </div>

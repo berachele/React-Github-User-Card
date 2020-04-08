@@ -12,28 +12,28 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    // axios.get("https://api.github.com/users/berachele")
-    // .then(response => {
-    //   console.log(response.data)
-    //   this.setState({
-    //     users: response.data
-    //   })
-    // })
-    // .catch(error => {
-    //   console.log("ERROR!", error)
-    // })
-
-    axios.get("https://api.github.com/users/berachele/followers")
+    axios.get("https://api.github.com/users/berachele")
     .then(response => {
-      console.log("THIS IS FOLLWERS RESP-->", response.data)
+      console.log(response.data)
       this.setState({
-        followers: response.data
+        users: response.data
       })
     })
     .catch(error => {
-      console.log("Error on showFollowers", error)
+      console.log("ERROR!", error)
     })
-  }
+
+  //   axios.get("https://api.github.com/users/berachele/followers")
+  //   .then(response => {
+  //     console.log("THIS IS FOLLWERS RESP-->", response.data)
+  //     this.setState({
+  //       followers: response.data
+  //     })
+  //   })
+  //   .catch(error => {
+  //     console.log("Error on showFollowers", error)
+  //   })
+  // }
 
   // showFollowers = event => {
   //   event.preventDefault()
@@ -41,13 +41,13 @@ class App extends React.Component {
   //   .then(response => {
   //     console.log("THIS IS FOLLWERS RESP-->", response)
   //     // this.setState({
-  //     //   followers: []
+  //     //   followers: response.data
   //     // })
   //   })
   //   .catch(error => {
   //     console.log("Error on showFollowers", error)
   //   })
-  // }
+  }
 
   render(){
     return (
@@ -57,8 +57,8 @@ class App extends React.Component {
           <h1>GitHub User's</h1>
         </header>
         <div>
-          {/* <UserCard users={this.state.users}/> */}
-          <FollowerList followers={this.state.followers}/>
+          <UserCard users={this.state.users}/>
+          {/* <FollowerList followers={this.state.followers}/> */}
         </div>
       </div>
     )
