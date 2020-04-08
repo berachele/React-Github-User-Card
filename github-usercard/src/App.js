@@ -1,24 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import UserList from "./components/UserList"
+import UserCard from "./components/UserCard"
+import FollowerCard from "./components/FollowerCard"
 import axios from "axios"
 
 class App extends React.Component {
-  constructor(){
-    super()
-    this.state = {
-      user: []
-    }
+  state = {
+    users: {}
   }
 
   componentDidMount(){
     axios.get("https://api.github.com/users/berachele")
     .then(response => {
-      // console.log(response.data)
+      console.log(response.data)
       this.setState({
-        user: response.data
+        users: response.data
       })
+    })
+    .catch(error => {
+      console.log("ERROR!", error)
     })
   }
 
@@ -30,7 +31,17 @@ class App extends React.Component {
           <h1>GitHub User's</h1>
         </header>
         <div>
-          <UserList />
+          <UserCard users={this.state.users}/>
+          {/* <h2>Name: {this.name}</h2>
+          <h3>Username: {this.username}</h3>
+          <img>{this.photo}</img>
+          <p>More info <button>down below</button></p>
+          <div>
+              <p>Location: {this.location}</p>
+              <p>Bio: {this.bio}</p>
+              <p>Followers: {this.followers}</p>
+              <p>Following: {this.following}</p>
+          </div> */}
         </div>
       </div>
     )
