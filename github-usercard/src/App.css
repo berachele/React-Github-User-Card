@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
+
 .App-logo{
-  width: 100px;
+  width: 125px;
+}
+*{
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html, body, .header, h1, h2, h3, p, b, div, img{
+  border: 1px solid red;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 34.75%;
+  margin: 2% 0;
+}
+
+h1{
+  font-size: 3rem;
+}
+h2{
+  font-size: 1.6rem;
+}
+h3{
+  font-size: 1.4rem;
+  color: grey;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.card{
+  border: 1px solid grey;
+  padding: 2%;
+  width: 100%;
+}
+.card img{
+  width: 80%;
+  margin-left: 9%;
+}
+p{
+  
+}
+b{
+
 }

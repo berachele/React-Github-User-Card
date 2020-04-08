@@ -9,10 +9,10 @@ const UserCard = props => {
                 <img src={props.users.avatar_url} alt="Profile image of GitHub user"/>
                 {/* <p>More info <button>down below</button></p> */}
                 <div>
-                    <p>Location: {props.users.location}</p>
-                    <p>Bio: {props.users.bio}</p>
-                    <p>Followers: {props.users.followers}</p>
-                    <p>Following: {props.users.following}</p>
+                    <p><b>Location:</b> {props.users.location}</p>
+                    <p><b>Bio:</b> {props.users.bio}</p>
+                    <p><b>Followers:</b> {props.users.followers}</p>
+                    <p><b>Following:</b> {props.users.following}</p>
                     {/* <div>
                         <p>See my followers: <button>here</button></p>
                     </div> */}
