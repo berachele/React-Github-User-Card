@@ -10,10 +10,10 @@ const FollowerList = props => {
            key={follower.id} 
            login={follower.login}
            avatar_url={follower.avatar_url}
-           location={follower.location}
-           bio={follower.bio}
-           followers={follower.followers}
-           following={follower.following}
+        //    location={follower.location}
+        //    bio={follower.bio}
+        //    followers={follower.followers}
+        //    following={follower.following}
            />
         })}
         </div>
