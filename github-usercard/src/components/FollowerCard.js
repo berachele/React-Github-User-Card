@@ -1,7 +1,7 @@
 import React from "react"
 
 const FollowerCard = props => {
-    console.log("Returning FollowerCard props-->", props)
+    // console.log("Returning FollowerCard props-->", props)
     return(
         <div>
             {/* <h2>{props.followers.name}</h2> */}

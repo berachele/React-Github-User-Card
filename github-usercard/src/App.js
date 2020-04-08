@@ -34,19 +34,6 @@ class App extends React.Component {
   //     console.log("Error on showFollowers", error)
   //   })
   // }
-
-  // showFollowers = event => {
-  //   event.preventDefault()
-  //   axios.get("https://api.github.com/users/berachele/followers")
-  //   .then(response => {
-  //     console.log("THIS IS FOLLWERS RESP-->", response)
-  //     // this.setState({
-  //     //   followers: response.data
-  //     // })
-  //   })
-  //   .catch(error => {
-  //     console.log("Error on showFollowers", error)
-  //   })
   }
 
   render(){
