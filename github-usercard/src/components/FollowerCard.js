@@ -3,7 +3,7 @@ import React from "react"
 const FollowerCard = props => {
     // console.log("Returning FollowerCard props-->", props)
     return(
-        <div>
+        <div className="card">
             {/* <h2>{props.followers.name}</h2> */}
             <h3>{props.login}</h3>
             <img src={props.avatar_url} alt="Profile image of GitHub user"/>
