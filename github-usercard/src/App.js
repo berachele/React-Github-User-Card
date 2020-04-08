@@ -23,16 +23,16 @@ class App extends React.Component {
       console.log("ERROR!", error)
     })
 
-  //   axios.get("https://api.github.com/users/berachele/followers")
-  //   .then(response => {
-  //     console.log("THIS IS FOLLWERS RESP-->", response.data)
-  //     this.setState({
-  //       followers: response.data
-  //     })
-  //   })
-  //   .catch(error => {
-  //     console.log("Error on showFollowers", error)
-  //   })
+    axios.get("https://api.github.com/users/berachele/followers")
+    .then(response => {
+      console.log("THIS IS FOLLWERS RESP-->", response.data)
+      this.setState({
+        followers: response.data
+      })
+    })
+    .catch(error => {
+      console.log("Error on showFollowers", error)
+    })
   }
 
 
@@ -45,7 +45,7 @@ class App extends React.Component {
         </header>
         <div>
           <UserCard users={this.state.users}/>
-          {/* <FollowerList followers={this.state.followers}/> */}
+          <FollowerList followers={this.state.followers}/>
         </div>
       </div>
     )

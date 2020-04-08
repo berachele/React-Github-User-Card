@@ -10,7 +10,7 @@
 }
 
 html, body, .header, h1, h2, h3, p, b, div, img{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
 }
@@ -39,19 +39,23 @@ h3{
   font-size: 1.4rem;
   color: grey;
   font-family: "Source Sans Pro", sans-serif;
+  background-color: #e0d7d7;
 }
 .card{
   border: 1px solid grey;
   padding: 2%;
   width: 100%;
+  border-radius: 5px;
+  background-color: #fff4f4;
+  box-shadow: 3px 5px #e0d7d7;
+  margin: 2% 0 4%;
 }
 .card img{
   width: 80%;
   margin-left: 9%;
+  border-radius: 5px;
+  box-shadow: 2px 2px #c4c4c4;
 }
-p{
-  
-}
-b{
-
+p, b {
+  font-size: 1.1rem;
 }
